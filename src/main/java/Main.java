@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Программа: М А Г А З И Н.");
+        System.out.println("Программа: М А Г А З и Н.");
         Scanner scanner = new Scanner(System.in);
         Products products = new Products();
         products.fill();
@@ -69,10 +69,15 @@ public class Main {
                                 }
                                 basket.printBascetPut(products);
                             }
-
+                            int count = 1;
                             if (choiceBasket == 2) {
-                                System.out.println("Заказ оформлен!");
+                                order.listOrders(basket.getBasketProduct());
+                                System.out.println("Заказ оформлен! Номер заказа " + count);
+                                count++;
                             }
+
+                            if (choiceBasket == 3)
+                                break;
                         }
                     }
                         break;
