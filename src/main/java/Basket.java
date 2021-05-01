@@ -15,7 +15,7 @@ public class Basket {
         basketProduct.put(id, quantity);
     }
 
-    public void printBascetPut(Products products) {
+    public void print(Products products) {
         for(Map.Entry<String, Integer> entry : basketProduct.entrySet()) {
             Product product = products.getProductsBase().get(entry.getKey());
             System.out.println(product + " количество " + entry.getValue() + " cтоимость: " + (entry.getValue() * product.getCost()));
